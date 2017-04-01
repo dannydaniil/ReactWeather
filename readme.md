@@ -1,3 +1,3 @@
-#React Weather Application
+# ReactWeather
 
-This is my first personal live application!
+This is my first live project using React.js !
