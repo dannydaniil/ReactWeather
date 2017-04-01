@@ -1,3 +1,3 @@
 # ReactWeather
 
-This is my first live project using React.js !
+This is my first personal live project using React.js !
