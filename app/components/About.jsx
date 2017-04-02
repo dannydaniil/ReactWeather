@@ -5,13 +5,22 @@ var About = (props)=>{
   return(
     <div>
     <h1 className="text-center">About</h1>
-    <div className="text-center">
-      <p>This is my first project using React</p>
-      <p>I am also using Foundation for styling</p>
-      <p>You are welcome to take a look at this project's gihub repository over <a href="https://github.com/dannydaniil/ReactWeather">here</a></p>
+      <p>This is a weather application built on React</p>
+      <ol>Here are some of the tools I have used:
+      <li>
+        The JavaScript framework used can be found <a href="https://facebook.github.io/react">here</a>
+      </li>
+      <li>
+        The weather API used can be found <a href="https://openweathermap.org/">here</a>
+      </li>
+      <li>
+        The styling was done using Foundation, which can be found <a href="http://foundation.zurb.com/">here</a>
+      </li>
+      <li>
+        You are welcome to take a look at this project's Github repository over <a href="https://github.com/dannydaniil/ReactWeather">here</a>
+    </li>
+  </ol>
     </div>
-    </div>
-  )
-};
+  )};
 
 module.exports = About;
