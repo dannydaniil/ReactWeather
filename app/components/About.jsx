@@ -12,7 +12,7 @@ var React = require('react');
 // only use render, do not alter any state
 var About = (props)=>{
   return(
-    <h3>About Component</h3>
+    <h3>About</h3>
   )
 };
 
