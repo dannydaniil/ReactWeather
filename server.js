@@ -7,12 +7,14 @@ const PORT = process.env.PORT || 3000;
 // express middleware
 app.use(function(req, res, next){
 
-  // if http
+  // if https , then change
   if(req.headers['x-forwarded-proto'] === 'https'){
     res.redirect('http://' + req.hostname + req.url);
 
+// if not https, no need to do anything
   } else {
-next();
+
+    next();
     // if not, redirect to http
 
   }
