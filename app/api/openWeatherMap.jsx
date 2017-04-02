@@ -20,7 +20,7 @@ module.exports = {
     // takes a URL and goes to fetch it
     return axios.get(requestURL).then(
         function(res){
-          debugger;
+          //debugger;
           if(res.data.cod && res.data.message){ // this means there was some kind of error
             throw new Error(res.data.message)
           } else {
