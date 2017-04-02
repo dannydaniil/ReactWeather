@@ -18,7 +18,7 @@ var About = (props)=>{
       </li>
       <li>
         You are welcome to take a look at this project's Github repository over <a href="https://github.com/dannydaniil/ReactWeather">here</a>
-    </li>
+      </li>
   </ol>
     </div>
   )};

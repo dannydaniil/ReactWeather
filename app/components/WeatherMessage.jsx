@@ -6,7 +6,7 @@ var WeatherMessage = (props) => {
   var temp = props.temp;
 
   return(
-    <h3>It is {temp} degrees in {location}</h3>
+    <h3 className="text-center">It is {temp}&deg;C in {location}</h3>
   );
 
 }

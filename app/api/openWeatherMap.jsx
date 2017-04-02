@@ -19,15 +19,17 @@ module.exports = {
     //make request as simply as evident
     // takes a URL and goes to fetch it
     return axios.get(requestURL).then(
+
         function(res){
-          debugger;
-          if(res.data.cod && res.data.message){ // this means there was some kind of error
+          if(!res.data.cod && res.data.message){ // this means there was some kind of error
             throw new Error(res.data.message)
           } else {
             return res.data.main.temp;
           }
-        }, function(res){
-          throw new Error(res.data.message);
+
+// fix for newer axios version below
+        }, function(err){
+          throw new Error('Unable to fetch weather for that location.');
         });
   }
 }
