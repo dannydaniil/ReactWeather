@@ -13,7 +13,7 @@ var Main = (props) =>{
             {props.children}
             <div className="page-footer text-center">
               <p>Developed by: Daniil, Daniel Chris</p>
-              <p>Contact information: <a href="mailto:dannydaniil@yahoo.com">dannydaniil@yahoo.com</a>.</p>
+              <p>Contact information: <a href="mailto:dannydaniil@yahoo.com">dannydaniil@yahoo.com</a></p>
             </div>
           </div>
 
