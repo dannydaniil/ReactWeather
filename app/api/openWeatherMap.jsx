@@ -6,30 +6,28 @@ const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?app
 
 module.exports = {
 
-  // this component returns a function named getTemp
-  getTemp: function(location){
+    // this component returns a function named getTemp
+    getTemp: function(location) {
 
-    // make our location string ready to be used in form of a URl
-    var encodedLocation = encodeURIComponent(location);
+        // make our location string ready to be used in form of a URl
+        var encodedLocation = encodeURIComponent(location);
 
-    // the URL that will be requested from open weather map
-    // these are called QUESRRY STRINGS
-    var requestURL=`${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
+        // the URL that will be requested from open weather map
+        // these are called QUESRRY STRINGS
+        var requestURL = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
 
-    //make request as simply as evident
-    // takes a URL and goes to fetch it
-    return axios.get(requestURL).then(
+        //make request as simply as evident
+        // takes a URL and goes to fetch it
+        return axios.get(requestURL).then(function(res) {
+            if (res.data.cod && res.data.message) { // this means there was some kind of error
+                throw new Error(res.data.message)
+            } else {
+                return res.data.main.temp;
+            }
 
-        function(res){
-          if(!res.data.cod && res.data.message){ // this means there was some kind of error
-            throw new Error(res.data.message)
-          } else {
-            return res.data.main.temp;
-          }
-
-// fix for newer axios version below
-        }, function(err){
-          throw new Error('Unable to fetch weather for that location.');
+            // fix for newer axios version below
+        }, function(err) {
+            throw new Error('Unable to fetch weather for that location.');
         });
-  }
+    }
 }

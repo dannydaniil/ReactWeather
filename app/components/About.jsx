@@ -3,8 +3,8 @@ var React = require('react');
 // only use render, do not alter any state
 var About = (props)=>{
   return(
-    <div>
-    <h1 className="text-center">About</h1>
+    <div >
+    <h1 className="text-center page-title">About</h1>
       <p>This is a weather application built on React</p>
       <ol>Here are some of the tools I have used:
       <li>

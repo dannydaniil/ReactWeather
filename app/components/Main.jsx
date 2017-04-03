@@ -11,8 +11,14 @@ var Main = (props) =>{
         <div className="row">
           <div className="columns medium-6 large-4 small-centered">
             {props.children}
+            <div className="page-footer text-center">
+              <p>Developed by: Daniil, Daniel Chris</p>
+              <p>Contact information: <a href="mailto:dannydaniil@yahoo.com">dannydaniil@yahoo.com</a>.</p>
+            </div>
           </div>
+
         </div>
+
       </div>
     );
   }
